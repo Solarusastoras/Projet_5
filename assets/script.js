@@ -24,7 +24,6 @@ const slides = [
 let IndexActuel = 0;
 
 function mettreAJourCarousel() {
-
   // Image affichée
   // Sélectionner l'élément image du carousel
   let ElementImage = document.querySelector(".banner-img");
@@ -35,7 +34,6 @@ function mettreAJourCarousel() {
   // Mettre à jour l'attribut 'src'
   ElementImage.src = urlImageActuelle;
 
-
   // Texte affichée
   // Sélectionner l'élément de texte du carousel
   let ElementTexte = document.querySelector("#banner p");
@@ -45,7 +43,6 @@ function mettreAJourCarousel() {
 
   // Mettre à jour le contenu HTML de l'élément de texte avec le texte actuel
   ElementTexte.innerHTML = texteActuel;
-
 
   // Dots
   // Sélectionner tous les points du carousel
@@ -70,9 +67,7 @@ function mettreAJourCarousel() {
 // Mettre à jour le carousel
 let arrowLeft = document.querySelector(".arrow_left");
 arrowLeft.addEventListener("click", function () {
-  // Si l'index actuel est supérieur à 0
   if (IndexActuel > 0) {
-    // Diminuer l'index actuel
     IndexActuel -= 1;
   } else {
     // Sinon, aller à la dernière diapositive
@@ -80,7 +75,6 @@ arrowLeft.addEventListener("click", function () {
   }
   console.log("Flèche gauche cliquée");
 
-  // Mettre à jour le carousel
   mettreAJourCarousel();
 });
 
@@ -89,14 +83,11 @@ let arrowRight = document.querySelector(".arrow_right");
 arrowRight.addEventListener("click", function () {
   // Si l'index actuel est inférieur à la longueur des slides moins 1
   if (IndexActuel < slides.length - 1) {
-    // Augmenter l'index actuel
     IndexActuel += 1;
   } else {
-    // Sinon, aller à la première slide
     IndexActuel = 0;
   }
 
-  // Mettre à jour le carousel
   mettreAJourCarousel();
 
   console.log("Flèche droite cliquée");
