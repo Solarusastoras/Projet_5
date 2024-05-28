@@ -35,3 +35,15 @@ let arrowRight = document.querySelector(".arrow_right");
 arrowRight.addEventListener ("click", function (){
 console.log("Flèche droite cliquée");
 });
+
+
+//Dots
+// faire apparaitre Dots sous les images
+let dotsContainer = document.querySelector(".dots");
+
+// creation un nouvel élément div
+let dot = document.createElement("div");
+dot.classList.add("dot");
+
+// Ajouter l'élément div au conteneur des points
+dotsContainer.appendChild(dot);
