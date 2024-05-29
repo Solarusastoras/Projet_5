@@ -71,7 +71,7 @@ arrowLeft.addEventListener("click", function () {
     IndexActuel -= 1;
   } else {
     // Sinon, aller à la dernière diapositive
-    IndexActuel = slides.length - 1;
+    IndexActuel = 3;
   }
   console.log("Flèche gauche cliquée");
 
@@ -82,7 +82,7 @@ arrowLeft.addEventListener("click", function () {
 let arrowRight = document.querySelector(".arrow_right");
 arrowRight.addEventListener("click", function () {
   // Si l'index actuel est inférieur à la longueur des slides moins 1
-  if (IndexActuel < slides.length - 1) {
+  if (IndexActuel < 3) {
     IndexActuel += 1;
   } else {
     IndexActuel = 0;
